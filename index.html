@@ -1,92 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Himanshi | Full-Stack Developer & Designer</title>
-  <meta name="description" content="Portfolio of Himanshu, a modern full-stack developer crafting high-performance digital products." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Himanshi ✨ | AI Explorer &amp; Creative Technologist</title>
+  <meta name="description" content="Portfolio of Himanshi - CS &amp; AI scholar, computer vision engineer, and UI designer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
-  <div class="glow-bg" id="cursor-glow"></div>
+  <div class="ambient-glow glow-blue"></div><div class="ambient-glow glow-purple"></div>
   <header class="navbar">
-    <a href="#" class="logo">Himanshi<span>.</span></a>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Work</a>
-      <a href="#contact" class="nav-cta">Contact</a>
-    </nav>
+    <div class="container nav-wrap">
+      <a href="#hero" class="brand">Himanshi<span class="dot">.</span><span class="badge-brand">AI ✨</span></a>
+      <button class="nav-toggle" id="menuBtn" aria-label="Toggle menu"><span></span><span></span></button>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">About 👋</a><a href="#education" class="nav-link">Education 🎓</a><a href="#services" class="nav-link">Services 🛠️</a><a href="#projects" class="nav-link">Projects 🚀</a><a href="#resume" class="nav-link">Resume 📄</a><a href="#contact" class="nav-btn">Get In Touch ✉️</a>
+      </nav>
+    </div>
   </header>
-
-  <main class="container">
-    <section id="about" class="hero section">
-      <div class="badge"><span class="pulse"></span> Available for new projects</div>
-      <h1 class="hero-title">Designing & building scalable <span>web experiences</span>.</h1>
-      <p class="hero-desc">Full-Stack Engineer specialized in React, modern JavaScript, and high-performance systems with an eye for sleek UI design.</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">Explore Work</a>
-        <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-content">
+        <div class="hero-pill"><span class="live-dot"></span> 💡 Open for AI &amp; UI Collaborations</div>
+        <h1 class="hero-h1">Engineering <span class="c-blue">Intelligent Systems</span><br />&amp; Refined <span class="c-purple">Digital Aesthetics</span></h1>
+        <p class="hero-desc">Hello, I'm <strong>Himanshi</strong> 👩‍💻 — a First-Year Computer Science &amp; AI scholar merging real-time Computer Vision, autonomous agent workflows, and pixel-precise minimalist design.</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">Explore Projects 🚀</a><a href="#resume" class="btn btn-outline">Download Resume 📥</a><button class="btn btn-soft" id="chatHeroBtn">Ask Autonomous AI 🤖</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-pill"><span class="stat-num">04+</span><span class="stat-txt">⚡ Featured Builds</span></div>
+          <div class="stat-pill"><span class="stat-num">95%</span><span class="stat-txt">🎯 ATS Resume Pass</span></div>
+          <div class="stat-pill"><span class="stat-num">&lt;500</span><span class="stat-txt">✨ Lines Total</span></div>
+          <div class="stat-pill"><span class="stat-num">100%</span><span class="stat-txt">🚀 Responsive UI</span></div>
+        </div>
       </div>
     </section>
-
-    <section id="skills" class="section">
-      <h2 class="section-title">Core Technologies</h2>
-      <div class="skills-grid">
-        <div class="skill-card">TypeScript</div>
-        <div class="skill-card">React / Next.js</div>
-        <div class="skill-card">Node.js</div>
-        <div class="skill-card">Python</div>
-        <div class="skill-card">PostgreSQL</div>
-        <div class="skill-card">Docker & Cloud</div>
-        <div class="skill-card">UI/UX Design</div>
-        <div class="skill-card">REST & GraphQL</div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-grid">
-        <article class="project-card">
-          <div class="card-meta"><span>Full Stack</span> • <span>2025</span></div>
-          <h3>Nova AI Workspace</h3>
-          <p>Real-time collaborative workspace integrating multimodal LLMs, smart search, and instant canvas rendering.</p>
-          <div class="project-tags"><span>Next.js</span><span>WebSockets</span><span>Tailwind</span></div>
-          <div class="project-links">
-            <a href="https://github.com" target="_blank" rel="noreferrer">GitHub ↗</a>
-            <a href="https://demo.example.com" target="_blank" rel="noreferrer">Live Demo ↗</a>
+    <section class="sec" id="about">
+      <div class="container">
+        <div class="sec-head"><span class="tag">👋 Introduction</span><h2>About Me • Himanshi ✨</h2><p>Where mathematical logic meets contemporary, minimalist user experiences.</p></div>
+        <div class="about-grid">
+          <div class="card about-main">
+            <h3>Decoding Neural Workflows &amp; Human Interaction 🧠</h3>
+            <p>I am a passionate CS &amp; AI student exploring how autonomous neural agents, computer vision anomaly models, and clean visual layouts can simplify high-stakes challenges into intuitive digital experiences.</p>
+            <div class="tags-cloud">
+              <span class="tag-pill tp-blue">Python 🐍</span><span class="tag-pill tp-purple">OpenCV 👁️</span><span class="tag-pill tp-cyan">AI Agents 🤖</span>
+              <span class="tag-pill tp-orchid">Figma 🎨</span><span class="tag-pill tp-amber">Gamma Decks ⚡</span><span class="tag-pill tp-mint">Vanilla Web 💻</span>
+            </div>
           </div>
-        </article>
-        <article class="project-card">
-          <div class="card-meta"><span>FinTech</span> • <span>2024</span></div>
-          <h3>Pulse Telemetry Engine</h3>
-          <p>High-throughput data dashboard tracking distributed metrics and live transaction anomaly alerts.</p>
-          <div class="project-tags"><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>
-          <div class="project-links">
-            <a href="https://github.com" target="_blank" rel="noreferrer">GitHub ↗</a>
-            <a href="https://demo.example.com" target="_blank" rel="noreferrer">Live Demo ↗</a>
+          <div class="about-list">
+            <div class="feature-card"><span class="f-icon bg-ice">⚡</span><div><h4>High-Velocity Engineering</h4><p>Clean semantic code with zero bloat and high performance.</p></div></div>
+            <div class="feature-card"><span class="f-icon bg-mint">👁️</span><div><h4>Vision &amp; Autonomous AI</h4><p>Keypoint gesture tracking &amp; automated hazard detection.</p></div></div>
+            <div class="feature-card"><span class="f-icon bg-lavender">🎨</span><div><h4>Visual Identity &amp; ATS</h4><p>Engineered resumes and collegiate brochures that stand out.</p></div></div>
           </div>
-        </article>
+        </div>
       </div>
     </section>
-
-    <section id="contact" class="section contact-section">
-      <div class="contact-box">
-        <h2>Let's build something exceptional.</h2>
-        <p>Have an idea or need an engineer on your team? Send a message or reach out directly.</p>
-        <div class="contact-actions">
-          <button id="copy-email-btn" class="btn btn-primary" data-email="himanshu@example.com">Copy Email</button>
-          <a href="mailto:himanshu@example.com" class="btn btn-secondary">Send Email</a>
+    <section class="sec sec-alt" id="education">
+      <div class="container">
+        <div class="sec-head"><span class="tag">🎓 Academic Milestones</span><h2>Foundational Education</h2><p>Rigorous computer science curriculum blended with applied algorithmic problem-solving.</p></div>
+        <div class="edu-grid">
+          <div class="card edu-card">
+            <span class="badge-time">2025 — 2029 🚀 Ongoing</span><h3>B.Tech in Computer Science &amp; Artificial Intelligence</h3><p class="edu-inst">🏛️ Undergraduate Scholar • First Year Focus</p>
+            <p>Core coursework covering Data Structures &amp; Algorithms, Discrete Mathematics, Multimodal Systems, Neural Architectures, and Applied Computer Vision.</p>
+          </div>
+          <div class="card edu-card">
+            <span class="badge-time">2023 — 2025 📚 Distinction</span><h3>Higher Secondary Certificate (Grade XII)</h3><p class="edu-inst">🏫 Science &amp; Advanced Mathematics Stream</p>
+            <p>Graduated with high distinction in Physics, Chemistry, and Mathematics; cultivated foundational computational thinking and quantitative modeling.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec" id="services">
+      <div class="container">
+        <div class="sec-head"><span class="tag">🛠️ What I Offer</span><h2>Specialized Services</h2><p>Tailored technical and creative capabilities engineered for maximum impact.</p></div>
+        <div class="grid-4">
+          <div class="card svc-card s-orchid"><span class="svc-icon">📄</span><h3>ATS Resume Architecture</h3><p>Typographical, recruiter-vetted resumes engineered to clear automated tracking filters with high interview call rates.</p><span class="svc-meta">✓ 95%+ ATS Score • Figma &amp; PDF</span></div>
+          <div class="card svc-card s-amber"><span class="svc-icon">🎨</span><h3>Pamphlets &amp; Event Collateral</h3><p>Vibrant, typography-driven flyers and promotional assets designed for technical hackathons and campus events.</p><span class="svc-meta">✓ Print &amp; Digital Ready</span></div>
+          <div class="card svc-card s-blue"><span class="svc-icon">💻</span><h3>Clean Web &amp; UI Systems</h3><p>Blazing-fast responsive websites crafted with vanilla semantic technologies and fluid GSAP physics.</p><span class="svc-meta">✓ Mobile First • Zero Bloat</span></div>
+          <div class="card svc-card s-mint"><span class="svc-icon">🤖</span><h3>AI Research &amp; Presentation Decks</h3><p>Synthesizing complex agent architectures and model comparisons into clear, memorable Gamma presentations.</p><span class="svc-meta">✓ Multimodal Tech Insights</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec-alt" id="projects">
+      <div class="container">
+        <div class="sec-head"><span class="tag">🚀 Selected Works</span><h2>Featured Projects</h2><p>Practical systems connecting machine vision, agentic reasoning, and interactive web architecture.</p></div>
+        <div class="grid-2">
+          <article class="card proj-card bar-purple">
+            <div class="proj-top"><span class="proj-badge">🔮 AI Agents &amp; Research</span><span class="proj-yr">2026</span></div>
+            <h3>Doraemon vs. Modern AI Agents</h3><p>An in-depth comparative study on Gamma contrasting 22nd-century fictional gadgets with modern autonomous LLM agents and multi-agent coordination.</p>
+            <div class="proj-tags"><span>Gamma App</span><span>Agent Workflows</span><span>LLM Benchmarks</span></div><a href="#contact" class="proj-link">Read Case Study ↗</a>
+          </article>
+          <article class="card proj-card bar-mint">
+            <div class="proj-top"><span class="proj-badge">🛡️ Computer Vision &amp; Safety</span><span class="proj-yr">2026</span></div>
+            <h3>Women Safety Analytics Platform</h3><p>Real-time pose estimation and computer vision pipeline detecting distress gestures, tracking body keypoints, and triggering emergency protocols.</p>
+            <div class="proj-tags"><span>Python</span><span>OpenCV</span><span>Pose Estimation</span></div><a href="#contact" class="proj-link">Inspect Architecture ↗</a>
+          </article>
+          <article class="card proj-card bar-blue">
+            <div class="proj-top"><span class="proj-badge">⚡ Minimalist Web Engine</span><span class="proj-yr">2026</span></div>
+            <h3>Fluid GSAP Portfolio System</h3><p>Ultra-responsive, clean-room portfolio layout featuring fifteen curated palette shades, autonomous AI chatbot, and GSAP physics under 500 lines.</p>
+            <div class="proj-tags"><span>HTML5 / CSS3</span><span>GSAP 3.12</span><span>Autonomous Bot</span></div><a href="#hero" class="proj-link">Explore Live Code ↗</a>
+          </article>
+          <article class="card proj-card bar-amber">
+            <div class="proj-top"><span class="proj-badge">📑 Visual &amp; Career Suite</span><span class="proj-yr">2025</span></div>
+            <h3>Collegiate Identity &amp; Career Suite</h3><p>A unified visual design suite comprising high-impact event flyers, conference collateral, and industry-tailored developer resumes.</p>
+            <div class="proj-tags"><span>Figma</span><span>Visual Design</span><span>Brand Systems</span></div><a href="#services" class="proj-link">View Creative Deck ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="sec" id="resume">
+      <div class="container">
+        <div class="resume-box">
+          <div class="resume-info">
+            <span class="tag">📄 Official Curriculum Vitae</span><h2>Download Himanshi's Professional Resume</h2>
+            <p>Verified 1-page ATS-formatted document detailing coursework, technical proficiencies, project outcomes, and contact details.</p>
+            <div class="resume-highlights"><span>✓ Updated for 2026</span><span>✓ ATS Clean Layout</span><span>✓ Instant One-Click Download</span></div>
+          </div>
+          <div class="resume-actions">
+            <button class="btn btn-primary" id="downloadResumeBtn">📥 Download Resume (CV)</button><a href="#contact" class="btn btn-outline">Request Custom Portfolio ✉️</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec-alt" id="contact">
+      <div class="container">
+        <div class="sec-head"><span class="tag">📬 Connect</span><h2>Let's Build Together</h2><p>Open for AI research discussions, freelance design inquiries, and campus collaborations.</p></div>
+        <div class="contact-wrap">
+          <div class="contact-card">
+            <h3>Get In Touch 💬</h3><p>Drop a message and I will reply within 24 hours.</p>
+            <div class="contact-items">
+              <div class="c-item"><span class="c-ico">✉️</span><div><small>Email</small><strong>himanshi@example.com</strong></div></div>
+              <div class="c-item"><span class="c-ico">📍</span><div><small>Location</small><strong>India • Available Worldwide</strong></div></div>
+              <div class="c-item"><span class="c-ico">⚡</span><div><small>Availability</small><strong class="c-mint">Open for Internships &amp; Projects</strong></div></div>
+            </div>
+          </div>
+          <form class="card contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="f-group"><label for="name">Your Name</label><input type="text" id="name" required placeholder="Jane Doe" /></div>
+              <div class="f-group"><label for="email">Your Email</label><input type="email" id="email" required placeholder="jane@example.com" /></div>
+            </div>
+            <div class="f-group">
+              <label for="subject">Inquiry Subject</label>
+              <select id="subject"><option value="resume">Resume &amp; CV Architecture 📄</option><option value="web">Web &amp; UI Development 💻</option><option value="ai">AI Research &amp; Presentation 🤖</option><option value="flyer">Pamphlets &amp; Flyers 🎨</option><option value="collab">General Collaboration 🤝</option></select>
+            </div>
+            <div class="f-group"><label for="msg">Message</label><textarea id="msg" rows="3" required placeholder="Hi Himanshi, let's discuss..."></textarea></div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message 🚀</button><p class="form-msg" id="formMsg"></p>
+          </form>
         </div>
       </div>
     </section>
   </main>
-
+  <aside class="chatbot">
+    <button class="chat-btn" id="chatToggle" aria-label="Open AI Assistant"><span>🤖</span><span class="chat-pulse"></span></button>
+    <div class="chat-panel" id="chatPanel">
+      <div class="chat-head"><div class="chat-user"><span class="status-live"></span><strong>Himanshi AI Bot 🤖</strong></div><button class="chat-close" id="chatClose" aria-label="Close chat">✕</button></div>
+      <div class="chat-body" id="chatMsgs"><div class="bot-bubble">👋 Hi! I'm Himanshi's autonomous assistant. Ask me anything about her skills, projects, or resume below!</div></div>
+      <div class="chat-chips">
+        <button class="chip-btn" data-q="Who is Himanshi?">Who is Himanshi? 👩‍💻</button><button class="chip-btn" data-q="Services">Services 🛠️</button><button class="chip-btn" data-q="Projects">Projects 🚀</button><button class="chip-btn" data-q="Download Resume">Download Resume 📄</button>
+      </div>
+      <form class="chat-input-row" id="chatForm">
+        <input type="text" id="chatInput" placeholder="Ask anything about Himanshi..." autocomplete="off" /><button type="submit" class="chat-submit" aria-label="Send">➤</button>
+      </form>
+    </div>
+  </aside>
   <footer class="footer">
-    <p>© 2026 Himanshu. Built with HTML, CSS & Vanilla JS.</p>
+    <div class="container foot-wrap"><p>© 2026 Himanshi. Designed with 🤍, 15-shade palette &amp; GSAP.</p><a href="#hero" class="to-top">Back to top ↑</a></div>
   </footer>
   <script src="script.js"></script>
 </body>
